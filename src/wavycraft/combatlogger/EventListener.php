@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wavycraft\combatlog;
+namespace wavycraft\combatlogger;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerQuitEvent;
