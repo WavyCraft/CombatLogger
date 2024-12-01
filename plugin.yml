@@ -1,0 +1,7 @@
+name: CombatLogger
+version: 1.0.0
+authors: 
+ - WavyCraftNetwork
+ - Terpz710
+api: 5.0.0
+main: wavycraft\combatlogger\Loader
