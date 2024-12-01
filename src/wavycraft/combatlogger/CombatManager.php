@@ -10,7 +10,12 @@ use pocketmine\Server;
 
 use pocketmine\utils\SingletonTrait;
 
+use function array_map;
+use function count;
+use function max;
+
 use core\kitpvp\utils\KDRManager;
+
 use core\utils\TextColor;
 
 final class CombatManager {
