@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wavycraft\combatlog;
+namespace wavycraft\combatlogger;
 
 use pocketmine\scheduler\Task;
 
