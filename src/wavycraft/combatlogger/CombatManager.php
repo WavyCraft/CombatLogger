@@ -53,7 +53,7 @@ final class CombatManager {
                 if (time() <= $combatEndTime) {
                     $opponent = Server::getInstance()->getPlayerExact($opponentName);
                     if ($opponent !== null) {
-                        $opponent->sendMessage(TextColor::GREEN . "You have been credited for killing " . TextColor::YELLOW . $player->getName() . TextColor:.GREEN . "!");
+                        $opponent->sendMessage(TextColor::GREEN . "You have been credited for killing " . TextColor::YELLOW . $player->getName() . TextColor::GREEN . "!");
                         KDRManager::getInstance()->addKill($opponent);
                     }
                 }
