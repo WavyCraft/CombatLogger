@@ -18,7 +18,7 @@ class CombatTask extends Task {
         $this->player = $player;
     }
 
-    public function onRun(): void {
+    public function onRun() : void{
         $combatManager = CombatManager::getInstance();
 
         if (!$combatManager->isInCombat($this->player)) {
