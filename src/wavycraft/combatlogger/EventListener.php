@@ -14,7 +14,7 @@ class EventListener implements Listener {
 
     public function onPlayerQuit(PlayerQuitEvent $event) : void{
         $player = $event->getPlayer();
-
+        
         CombatManager::getInstance()->handlePlayerDisconnect($player);
     }
 
@@ -24,7 +24,7 @@ class EventListener implements Listener {
 
         if ($damager instanceof Player && $victim instanceof Player) {
             $combatManager = CombatManager::getInstance();
-            $combatManager->setCombatState($victim, $damager);
+            $combatManager->setCombatState($damager, $victim);
             $combatManager->resetCombatTimer($victim);
         }
     }
