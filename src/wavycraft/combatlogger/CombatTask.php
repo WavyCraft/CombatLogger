@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace wavycraft\combatlog;
 
 use pocketmine\scheduler\Task;
@@ -10,18 +12,18 @@ use core\utils\TextColor;
 
 class CombatTask extends Task {
 
-    private Player $player;
+    private $player;
 
     public function __construct(Player $player) {
         $this->player = $player;
     }
 
-    public function onRun() : void{
+    public function onRun(): void {
         $combatManager = CombatManager::getInstance();
 
         if (!$combatManager->isInCombat($this->player)) {
             $combatManager->resetCombatTimer($this->player);
-            $this->player->sendMessage(TextColor::GREEN . "Your combat timer has expired, You can now log out safely...");
+            $this->player->sendMessage(TextColor::GREEN . "Your combat timer has expired, you can now log out safely...");
             $this->getHandler()->cancel();
         } else {
             $remainingTime = $combatManager->getRemainingCombatTime($this->player);
